@@ -4,9 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var remove_1 = __importDefault(require("../remove"));
-var allTask = [{ task: "tengo que acabar", isCompleted: false }];
+var allTask = [{ task: "tengo que acabar", isCompleted: false }, { task: "plantar un arbol", isCompleted: false }];
 describe('Delete array object', function () {
     test('We pass an array of objects with ID of task to remove,\n and the function return the modified array', function () {
-        return expect((0, remove_1.default)(allTask, 0).length).toBe(0);
+        return expect((0, remove_1.default)(allTask, 0)[0].task).toBe('plantar un arbol');
     });
 });
