@@ -1,0 +1,23 @@
+{
+  "name": "cli-task-manager",
+  "version": "1.0.0",
+  "description": "A simple CLI task manager application.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "jest"
+  },
+  "keywords": ["cli", "task", "manager", "node", "typescript"],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^17.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  }
+}
