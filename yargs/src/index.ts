@@ -1,4 +1,3 @@
-// src/index.ts
 import { addTask, markTaskAsDone, deleteTask, listTasks, loadTasks } from "./tasks";
 const args = require("yargs").argv;
 loadTasks();
@@ -17,8 +16,14 @@ if (command === "add") {
   deleteTask(id);
   console.log("Task deleted successfully!");
 } else if (command === "list") {
+  
   listTasks().forEach((task) => {
     const status = task.done ? "[x]" : "[ ]";
     console.log(`${status} ${task.id}. ${task.description}`);
   });
+} else {
+
+  console.log('\t\t To Do List\n\nOptions:\n\nadd\t To write a new task.\ndone:\t To check a done task with the id number.\ndelete:\t To remove a task with the id number.\nlist:\t To list all tasks\n\n\n');
+  console.log('I.E.: node src/index.js add " Plantar un arbol"\n\n');
+  
 }

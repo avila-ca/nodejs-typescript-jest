@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// src/index.ts
 const tasks_1 = require("./tasks");
 const args = require("yargs").argv;
 (0, tasks_1.loadTasks)();
@@ -25,4 +24,9 @@ else if (command === "list") {
         const status = task.done ? "[x]" : "[ ]";
         console.log(`${status} ${task.id}. ${task.description}`);
     });
+    console.table((0, tasks_1.listTasks)());
+}
+else {
+    console.log('\t\t To Do List\n\nOptions:\n\nadd\t To write a new task.\ndone:\t To check a done task with the id number.\ndelete:\t To remove a task with the id number.\nlist:\t To list all tasks\n\n\n');
+    console.log('I.E.: node src/index.js add " Plantar un arbol"\n\n');
 }

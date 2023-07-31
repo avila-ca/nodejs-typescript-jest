@@ -25,12 +25,12 @@ function loadTasks(): void {
 }
 
 function addTask(description: string): void {
-  console.log('llllleeeeennnngggtttth'+tasks.length);
   const newTask: Task = {
     id: tasks.length + 1,
     description,
     done: false,
   };
+  console.log('llllleeeeennnngggtttth'+tasks.length);
   tasks.push(newTask);
   saveTasks();
 }
